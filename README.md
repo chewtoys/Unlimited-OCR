@@ -32,6 +32,7 @@
 
 
 ## Release
+- [2026/06/28] 🤝 Thanks to the [vLLM community](https://github.com/vllm-project/vllm) and [Tianyu Guo](https://github.com/gty111) for their support, our model now supports vLLM inference.
 - [2026/06/24] 🤝 Thanks to [AK](https://x.com/_akhaliq) for creating a demo for us. It is now available at [Hugging Face Spaces](https://huggingface.co/spaces/baidu/Unlimited-OCR).
 - [2026/06/23] 📄 Our paper is now available on [arXiv](https://arxiv.org/abs/2606.23050).
 - [2026/06/23] 🤝 Thanks to the ModelScope community for their support. Our model is now available at [ModelScope](https://modelscope.cn/models/PaddlePaddle/Unlimited-OCR).
@@ -122,6 +123,23 @@ model.infer_multi(
     no_repeat_ngram_size=35, ngram_window=1024,
     save_results=True,
 )
+```
+
+### vLLM
+
+Please refer to the official vLLM recipe for deployment details:
+**Recipe:** [https://recipes.vllm.ai/baidu/Unlimited-OCR](https://recipes.vllm.ai/baidu/Unlimited-OCR)
+
+##### Docker Images
+Use the following Docker images depending on your GPU platform:
+
+**Default (CUDA 13.0):**
+```bash
+docker pull vllm/vllm-openai:unlimited-ocr
+```
+**For Hopper GPUs (CUDA 12.9)**
+```bash
+docker pull vllm/vllm-openai:unlimited-ocr-cu129
 ```
 
 ### SGLang
